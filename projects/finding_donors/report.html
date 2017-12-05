@@ -14149,9 +14149,9 @@ SVC : ~0.7
 
 </code></pre>
 <p><strong> SVC </strong></p>
-<p>Based on the above F-score's, it seems the model built using SVC has good score than the remianing. Also it is consistent on both training and testing set. But it is vey slow in training and prediction. It took <strong>73 Sec</strong> to train 100% of data and <strong>13 Sec</strong> to give the predictions. I would pick this model as my final model becuase of better F-score.</p>
+<p>Based on the above F-score's, it seems the model built using SVC has good score than the remianing. Also it is consistent on both training and testing set. But it is vey slow in training and prediction. It took <strong>~75 Sec</strong> to train 100% of data and <strong>~13 Sec</strong> to give the predictions. Though it is slow, based on F-score, I would pick this model as my final model.</p>
 <p><strong> GaussianNB </strong></p>
-<p>The model built using GaussianNB is facing a high bias(underfitting) problem. Its F-score is increased with no of training data but not more than 0.4. It is faster in training and predictions as well. It took <strong> 0.11 Sec </strong> to train and <strong> 0.01 Sec </strong> to give the predictions.</p>
+<p>The model built using GaussianNB is facing a high bias(underfitting) problem. Its F-score is increased with no of training data but not more than 0.4. It is faster in training and predictions as well. It took <strong> ~0.11 Sec </strong> to train and <strong> ~0.01 Sec </strong> to give the predictions.</p>
 <p><strong> DecisionTreeClassifier </strong></p>
 <p>The model built using DecisionTreeClassifier is facing high variance (overfitting) problem. Its F-score is 1 in the trinaing set but 0.6 in the testing set. It seems it is not generalized the data well.</p>
 
