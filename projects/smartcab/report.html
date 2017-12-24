@@ -17195,6 +17195,21 @@ Also, violations and accidents are reduced to 0
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
+<p>Based on the US traffic rules, optimal policy should have the below basic rules.</p>
+
+<pre><code>When the light is red, waypoint is left and oncoming traffic is not None, then the policy should choose None.
+
+When the light is red, waypoint is right, and input[right] is None (vehicle is not present), then the policy should choose right. If the input[right] is not None, then the policy should choose None.
+
+When the light is green, waypoint is left, policy should choose left only if the oncoming is None.
+
+ When the light is green, waypoint is right, policy should choose right.
+
+In any of the scenarios, If there is possibility of collision, policy should not cosider the waypoint direction. instead it should choose None or the direction that is safe to travel. 
+
+
+</code></pre>
+<p>Below are the examples from the sim_improved-learning.txt which shows the same rules.</p>
 <p>For the following state,  when the light is green and the intended direction is right, optimal policy should be right. Q values captured it correctly.</p>
 
 <pre><code>('right', 'green', 'forward', 'forward', None)
